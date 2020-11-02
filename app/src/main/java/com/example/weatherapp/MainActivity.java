@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Button getWeather;
     TextView tempView;
     String url = "api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
-    String apiKey = "c2e55dbff55eae26384b366dc3e593e0";
+    String apiKey = " "; // Will get Api Key after sign up under MY Account-> My Api Key
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,52 +40,7 @@ public class MainActivity extends AppCompatActivity {
         cityTxt = findViewById(R.id.cityEdittxt);
         getWeather = findViewById(R.id.weatherBtn);
         tempView = findViewById(R.id.tv);
-//
-//        DownloadTask task = new DownloadTask();
-//        String result = null;
-//
-//        try {
-//            result = task.execute("https://community-open-weather-map.p.rapidapi.com/weather?lat=0&lon=0&callback=test&id=2172797&lang=null&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London%252Cuk").get();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        Log.i("Contents of URL", result);
     }
-
-//    public class DownloadTask extends AsyncTask<String, Void, String> {
-//
-//        @Override
-//        protected String doInBackground(String... urls) {
-//            String result = "";
-//            URL url;
-//
-//            HttpURLConnection connection = null;
-//
-//            try {
-//                url = new URL(urls[0]);
-//                connection = (HttpURLConnection) url.openConnection();
-//
-//                InputStream in = connection.getInputStream();
-//                InputStreamReader reader = new InputStreamReader(in);
-//
-//                int data = reader.read();
-//
-//                while (data != -1) {
-//                    char current = (char) data;
-//                    result += current;
-//                    data = reader.read();
-//                }
-//                return result;
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//                return "Failed";
-//            }
-//        }
-//    }
 
     public void getWeather(View view) {
         Retrofit retrofit = new Retrofit.Builder()
